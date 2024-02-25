@@ -13,70 +13,76 @@
         <span class="back-to-home-text">Back to Home</span>
     </div>
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form id="RegForm">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" id="uname" placeholder="Username" />
-			<input type="password" id="pwd" placeholder="Password" />
-			<button type="submit">Sign Up</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form id="LogForm">
-			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your account</span>
-			<input type="text" id="uname" placeholder="Username" />
-			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button type="submit">Sign In</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn">Sign In</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign Up</button>
-			</div>
-		</div>
-	</div>
+    <div class="form-container sign-up-container">
+        <form id="RegForm">
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" id="uname" placeholder="Username" />
+            <input type="password" id="pwd" placeholder="Password" />
+            <button type="submit">Sign Up</button>
+            <div id="registrationSuccessMessage" style="display: none;">
+                <p>Registration successful! You can now login.</p>
+            </div>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form id="LogForm">
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text" id="uname" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="signin/signin.js"></script>
 <script type="module">
+    // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getDatabase,set,get,ref,child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
     const firebaseConfig = {
-      apiKey: "AIzaSyCiDgjw0fw2LxlwAihDuerjgvoO0920Reo",
-      authDomain: "mentalhealth-7ea76.firebaseapp.com",
-      projectId: "mentalhealth-7ea76",
-      storageBucket: "mentalhealth-7ea76.appspot.com",
-      messagingSenderId: "577865166835",
-      appId: "1:577865166835:web:1e8ee89fd65f7fb3d76c86",
-      measurementId: "G-9GYFTFXFDC"
+      apiKey: "AIzaSyAzxUMWHDb1aRYEnfJOrRV5jE373rd9jrQ",
+      authDomain: "ikiglow-425e4.firebaseapp.com",
+      projectId: "ikiglow-425e4",
+      storageBucket: "ikiglow-425e4.appspot.com",
+      messagingSenderId: "25105154519",
+      appId: "1:25105154519:web:d4c44598b45c7610378b92",
+      measurementId: "G-LY1BWN1NLF"
     };
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    const db=getDatabase();
-    const auth=getAuth(app);
-    const dbref=ref(db)
+    const auth = getAuth(app);
+    const db = getDatabase();
+    const dbref = ref(db);
     
     let name=document.getElementById('uname');
     let password=document.getElementById('pwd');
@@ -84,22 +90,28 @@
     let LogForm = document.getElementById('LogForm');
     let RegisterUser = evt =>{
         evt.preventDefault();
-        const email = name.value + "@mentalhealth-7ea76.firebaseapp.com";
+        const email = name.value + "@ikiglow-425e4.firebaseapp.com";
         createUserWithEmailAndPassword(auth,email,password.value)
         .then((credentials)=>{
-            set(ref(db,'UsersAuthList/'+credentials.user.uid),{
-                name: name.value
+                set(ref(db,'UsersAuthList/'+credentials.user.uid),{
+                    name: name.value
+                }).then(() => {
+                    // Show success message
+                    document.getElementById('registrationSuccessMessage').style.display = 'block';
+                    // Optionally, clear the registration form
+                    name.value = '';
+                    password.value = '';
+                })
             })
-        })
-        .catch((error)=>{
-            alert(error.message);
-            console.log(error.code)
-            console.log(error.message)
-        })
+            .catch((error)=>{
+                alert(error.message);
+                console.log(error.code)
+                console.log(error.message)
+            })
     }
     let SignInUser = evt =>{
         evt.preventDefault();
-        const email = name.value + "@mentalhealth-7ea76.firebaseapp.com";
+        const email = name.value + "@ikiglow-425e4.firebaseapp.com";
         signInWithEmailAndPassword(auth,email,password.value)
         .then((credentials)=>{
             get(child(dbref,'UsersAuthList/'+credentials.user.uid)).then((snapshot)=>{
@@ -109,6 +121,9 @@
                     }))
                     sessionStorage.setItem("user-creds",JSON.stringify(credentials.user));
                     window.location.href="index.html"
+                    // Clear the signin form
+                name.value = '';
+                password.value = '';
                 }else {
                 alert('User not found.');
                 }
@@ -123,5 +138,7 @@
     RegForm.addEventListener('submit',RegisterUser)
     LogForm.addEventListener('submit',SignInUser)
   </script>
+
+
     </body>
 </html>
