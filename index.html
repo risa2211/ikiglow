@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BlissMind</title>
+        <title>IkiGlow</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -43,7 +43,10 @@
         
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">B<span>liss</span>M<span>ind</span></a>
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/ikiglow.png" alt="Logo" class="logo">
+            I<span>ki</span>G<span>low</span>
+        </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,13 +55,8 @@
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">About</a>
                         <a href="services.html" class="nav-item nav-link">Service</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
-                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="games.html" class="nav-item nav-link">Games</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="signin.html"  class="nav-item nav-link ml-auto">Login</a>
@@ -73,8 +71,7 @@
                         <div class="hero-text">
                             <h1>Mental Health</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
-                            </p>
+                                Healing isn't linear. It's essential to give yourself the time and space you need to heal, without feeling rushed or pressured. No one else can truly comprehend the intricacies of your experiences and the emotional wounds you carry.</p>
                             <div class="hero-btn">
                                 <a class="btn" href="">Join Now</a>
                                 <a class="btn" href="">Contact Us</a>
@@ -83,12 +80,21 @@
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-image">
-                            <img src="img/service.png" alt="Hero Image">
+                            <img src="img/hero.gif" alt="Hero Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center"> 
+                        <div class="hero-quote">
+                            <p id="quote-container"></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="bottom-blob"></div>
         </div>
+        
 
         <div class="about wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
@@ -101,7 +107,7 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header text-left">
                             <p>Learn About Us</p>
-                            <h2>Welcome to BlissMind</h2>
+                            <h2>Welcome to IkiGlow</h2>
                         </div>
                         <div class="about-text">
                             <p>
@@ -179,55 +185,47 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Testimonial</p>
-                    <h2>Our Client Say!</h2>
+                    <h2>Our Users Say!</h2>
                 </div>
                 <div class="owl-carousel testimonials-carousel">
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/" alt="Image">
+                            <img src="img/test1.png" alt="Image">
                         </div>
                         <div class="testimonial-text">
                             <p>
                                 Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
                             </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
                         </div>
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/" alt="Image">
+                            <img src="img/test2.png" alt="Image">
                         </div>
                         <div class="testimonial-text">
                             <p>
                                 Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
                             </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
                         </div>
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/" alt="Image">
+                            <img src="img/test3.png" alt="Image">
                         </div>
                         <div class="testimonial-text">
                             <p>
                                 Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
                             </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
                         </div>
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/" alt="Image">
+                            <img src="img/test2.png" alt="Image">
                         </div>
                         <div class="testimonial-text">
                             <p>
                                 Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
                             </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
                         </div>
                     </div>
                 </div>
@@ -244,24 +242,21 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/" alt="Image">
+                                <img src="img/team1.png" alt="Image">
                                 <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="ri-mail-line"></i></a>
                                     <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="team-text">
                                 <h2>Ridha</h2>
-                                <p>---</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/" alt="Image">
+                                <img src="img/team3.png" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -271,14 +266,13 @@
                             </div>
                             <div class="team-text">
                                 <h2>Chirag</h2>
-                                <p>---</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/" alt="Image">
+                                <img src="img/team2.png" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -288,14 +282,13 @@
                             </div>
                             <div class="team-text">
                                 <h2>Rakshitha</h2>
-                                <p>---</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/" alt="Image">
+                                <img src="img/team4.png" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -305,7 +298,6 @@
                             </div>
                             <div class="team-text">
                                 <h2>Sunil</h2>
-                                <p>---</p>
                             </div>
                         </div>
                     </div>
@@ -313,35 +305,6 @@
             </div>
         </div>
 
-        <!--<div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <a href="index.html" class="footer-logo">Y<span>oo</span>ga</a>
-                        <h3>Bengaluru, Karnataka</h3>
-                        <div class="footer-menu">
-                            <p>7975740933</p>
-                            <p>blissmind@gmail.com</p>
-                        </div>
-                        <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">BlissMind</a>, All Right Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Footer Start -->
         <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5">
@@ -349,7 +312,7 @@
                         <p class="section-title text-white h5 mb-4">Address<span></span></p>
                         <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, Bengaluru, Karnataka, India</p>
                         <p><i class="fa fa-phone-alt me-3"></i>12345 54321</p>
-                        <p><i class="fa fa-envelope me-3"></i>heart2heal.com</p>
+                        <p><i class="fa fa-envelope me-3"></i>ikiglow.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="twitter.com"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="facebook.com"><i class="fab fa-facebook-f"></i></a>
@@ -358,37 +321,41 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Services</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Admin Portal</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Conditions</a>
+                        <p class="section-title text-white h5 mb-4">Quick Helpline<span></span></p>
+                        <a class="btn btn-link" >Psychosocial helpline-<br> +91-9152987821</a>
+                        <a class="btn btn-link" >Mental health foundation-<br> +91-8322252525</a>
+                        <a class="btn btn-link" >Emotional Support-<br> +91-9088030303</a>
+                        <a class="btn btn-link" >Samaritans Mumbai-<br> +91-8422984530</a>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
                         <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/1.png" alt="Image">
+                            <div class="col-4 mb-4"> 
+                                <div class="image-container previewable">
+                                    <img class="img-fluid" src="img/1.png" alt="Image">
+                                    <div class="image-overlay">
+                                        <i class="ri-eye-line" onclick="previewImage('img/1.png')"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4">
                                 <img class="img-fluid" src="img/2.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4">
                                 <img class="img-fluid" src="img/3.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4">
                                 <img class="img-fluid" src="img/4.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4"> 
                                 <img class="img-fluid" src="img/5.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4"> 
                                 <img class="img-fluid" src="img/6.png" alt="Image">
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
                         <p>Subscribe to our newsletter and stay tuned for new updates</p>
@@ -414,7 +381,9 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></i></a>
 
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -428,3 +397,4 @@
         <script src="js/main.js"></script>
     </body>
 </html>
+
