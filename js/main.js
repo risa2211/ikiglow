@@ -1,8 +1,33 @@
 (function ($) {
     "use strict";
+
+    // Array of mental health quotes
+    var quotes = [
+        "\"Your mental health is a priority. Your happiness is an essential. Your self-care is a necessity.\"",
+        "\"It's okay to not be okay. Just don't give up. You are not alone.\"",
+        "\"Be kind to your mind.\"",
+        "\"Your mental health matters more than anything else. Don't ever forget that.\"",
+        "\"Taking care of your mental health is not selfish. It's necessary.\"",
+        "\"You are stronger than you think. You've got this.\"",
+        "\"Don't let your struggle become your identity. You are so much more than your mental health challenges.\"",
+        "\"Every day may not be good, but there is something good in every day.\"",
+        "\"Your mental health is just as important as your physical health.\"",
+        "\"You are enough, just as you are."
+    ];
+
+    // Function to generate and display a random quote
+    function displayRandomQuote() {
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        $('#quote-container').text(quotes[randomIndex]);
+    }
+
+    // Display an initial quote
+    displayRandomQuote();
+
+    // Update the quote every 10 seconds
+    setInterval(displayRandomQuote, 5000);
     
     new WOW().init();
-    
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -11,11 +36,11 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
+
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-    
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
@@ -24,7 +49,6 @@
             $('.navbar').removeClass('nav-sticky');
         }
     });
-    
 
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -40,8 +64,13 @@
         }
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
+        
+        // Click event for previewable images
+        $('.previewable').click(function () {
+            var imageSrc = $(this).find('img').attr('src');
+            previewImage(imageSrc);
+        });
     });
-
 
     $(".testimonials-carousel").owlCarousel({
         center: true,
@@ -63,8 +92,7 @@
             }
         }
     });
-    
-    
+
     $(".blog-carousel").owlCarousel({
         autoplay: true,
         dots: false,
@@ -89,7 +117,7 @@
             }
         }
     });
-    
+
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
@@ -100,6 +128,15 @@
         $(this).addClass('filter-active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
+
+    window.previewImage = function (imageSrc) {
+        $.magnificPopup.open({
+            items: {
+                src: imageSrc
+            },
+            type: 'image'
+        });
+    };
+
 })(jQuery);
 
