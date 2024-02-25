@@ -43,7 +43,10 @@
         
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">B<span>liss</span>M<span>ind</span></a>
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/ikiglow.png" alt="Logo" class="logo">
+            I<span>ki</span>G<span>low</span>
+        </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,16 +55,11 @@
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">About</a>
                         <a href="services.html" class="nav-item nav-link">Service</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
-                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="games.html" class="nav-item nav-link">Games</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="signin.html" id="loginButton" class="nav-item nav-link ml-auto">Login</a>
+                    <a href="signin.html"  class="nav-item nav-link ml-auto">Login</a>
                 </div>
             </div>
         </div>
@@ -80,7 +78,6 @@
             </div>
         </div>
 
-        <!-- Contact Start -->
         <div class="contact">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -138,8 +135,7 @@
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
-        <!-- Footer Start -->
+
         <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5">
@@ -147,7 +143,7 @@
                         <p class="section-title text-white h5 mb-4">Address<span></span></p>
                         <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, Bengaluru, Karnataka, India</p>
                         <p><i class="fa fa-phone-alt me-3"></i>12345 54321</p>
-                        <p><i class="fa fa-envelope me-3"></i>heart2heal.com</p>
+                        <p><i class="fa fa-envelope me-3"></i>ikiglow.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="twitter.com"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="facebook.com"><i class="fab fa-facebook-f"></i></a>
@@ -156,37 +152,41 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Services</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Admin Portal</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Conditions</a>
+                        <p class="section-title text-white h5 mb-4">Quick Helpline<span></span></p>
+                        <a class="btn btn-link" >Psychosocial helpline-<br> +91-9152987821</a>
+                        <a class="btn btn-link" >Mental health foundation-<br> +91-8322252525</a>
+                        <a class="btn btn-link" >Emotional Support-<br> +91-9088030303</a>
+                        <a class="btn btn-link" >Samaritans Mumbai-<br> +91-8422984530</a>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
                         <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/1.png" alt="Image">
+                            <div class="col-4 mb-4"> 
+                                <div class="image-container previewable">
+                                    <img class="img-fluid" src="img/1.png" alt="Image">
+                                    <div class="image-overlay">
+                                        <i class="ri-eye-line" onclick="previewImage('img/1.png')"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4">
                                 <img class="img-fluid" src="img/2.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4">
                                 <img class="img-fluid" src="img/3.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4">
                                 <img class="img-fluid" src="img/4.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4"> 
                                 <img class="img-fluid" src="img/5.png" alt="Image">
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mb-4"> 
                                 <img class="img-fluid" src="img/6.png" alt="Image">
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
                         <p>Subscribe to our newsletter and stay tuned for new updates</p>
@@ -212,8 +212,8 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-
+<!-- Back to Top -->
+<a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></i></a>
 
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
