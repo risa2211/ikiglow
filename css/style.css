@@ -1,4 +1,3 @@
-
 body {
     color: #797979;
     background: #ffffff;
@@ -43,12 +42,13 @@ a:focus {
     width: 44px;
     height: 44px;
     text-align: center;
-    line-height: 1;
+    line-height: 44px; /* Centering vertically */
     font-size: 22px;
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
     z-index: 9;
+    border-radius: 50%; /* Rounded shape */
 }
 
 .back-to-top:hover {
@@ -61,8 +61,8 @@ a:focus {
 
 .back-to-top i {
     color: #343148;
-    padding-top: 10px;
 }
+
 
 .top-bar {
     position: relative;
@@ -143,8 +143,8 @@ a:focus {
 .navbar .navbar-brand {
     margin: 0;
     color: #ffffff;
-    font-size: 45px;
-    line-height: 0px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -163,9 +163,12 @@ a:focus {
 }
 
 .navbar .navbar-brand img {
-    max-width: 100%;
-    max-height: 40px;
+    width: 60px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-right: 10px; /* Add spacing between the image and text */
 }
+
 
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -366,7 +369,6 @@ a:focus {
     list-style-type: none;
 }
 
-
 .hero {
     position: relative;
     width: 100%;
@@ -375,6 +377,19 @@ a:focus {
     background: #e4b0ee;
     overflow: hidden;
 }
+
+.bottom-blob {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+    background-image: url('img/bg-bottom.png');
+    background-size: cover;
+    z-index: -1; 
+}
+
+
 
 .hero .container-fluid {
     padding: 0;
@@ -495,6 +510,17 @@ a:focus {
         letter-spacing: 0;
     }
 }
+
+.hero-quote {
+    color: #343148;
+    text-align: center; /* Center align the quote */
+    font-size: 30px; /* Increase the font size */
+    margin-top: 20px; /* Add some top margin for spacing */
+    font-style: italic; /* Set the font style to italic */
+    font-family: cursive; /* Set the font family to cursive */
+    display: block; /* Ensure the text is displayed as a block element */
+}
+
 
 .about {
     position: relative;
@@ -1149,8 +1175,72 @@ a:focus {
     height: 100%;
 }
 
+.game {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
 
 
+.game .game-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.game .game-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.game .game-img {
+    position: relative;
+}
+
+.game .game-img img {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.game .game-text {
+    position: relative;
+    padding: 30px 30px 25px 30px;
+    border-right: 1px solid rgba(0, 0, 0, .07);
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
+    border-left: 1px solid rgba(0, 0, 0, .07);
+}
+
+
+.game .game-card h3 {
+    width: calc(100% - 95px);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.game .game-card a {
+    width: 40px;
+    height: 40px;
+    padding: 0 0 3px 1px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 100;
+    color: #343148;
+    background: #e4b0ee;
+    border-radius: 40px;
+    transition: .3s;
+}
+
+.game .game-wrap:hover .game-card a {
+    color: #e4b0ee;
+    background: #343148;
+}
 
 .footer {
     margin-top: 6rem;
@@ -1204,6 +1294,34 @@ a:focus {
     letter-spacing: 1px;
     box-shadow: none;
     color: #e4b0ee;
+}
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(74, 73, 68, 0.7); /* Adjust the overlay color and transparency */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-overlay i {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
 }
 
 .footer .copyright {
